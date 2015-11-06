@@ -1,0 +1,7 @@
+C:\dev\Teamtalk\Shared\bin\Release\Shared.dll
+C:\dev\Teamtalk\Shared\bin\Release\Shared.pdb
+C:\dev\Teamtalk\Shared\bin\Release\System.Net.Http.dll
+C:\dev\Teamtalk\Shared\bin\Release\System.Net.Http.xml
+C:\dev\Teamtalk\Shared\obj\Release\TeamTalkLib.NET.csprojResolveAssemblyReference.cache
+C:\dev\Teamtalk\Shared\obj\Release\Shared.dll
+C:\dev\Teamtalk\Shared\obj\Release\Shared.pdb

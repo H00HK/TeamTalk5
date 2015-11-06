@@ -1,0 +1,9 @@
+C:\dev\Teamtalk\TeamTalkLib.NET\bin\Release\Newtonsoft.Json.dll
+C:\dev\Teamtalk\TeamTalkLib.NET\bin\Release\Newtonsoft.Json.xml
+C:\dev\Teamtalk\TeamTalkLib.NET\obj\Release\TeamTalkLib.NET.csprojResolveAssemblyReference.cache
+C:\dev\Teamtalk\TeamTalkLib.NET\bin\Release\NLog.dll
+C:\dev\Teamtalk\TeamTalkLib.NET\bin\Release\NLog.xml
+C:\dev\Teamtalk\TeamTalkLib.NET\bin\Release\TeamTalkLib.NET.dll
+C:\dev\Teamtalk\TeamTalkLib.NET\bin\Release\TeamTalkLib.NET.pdb
+C:\dev\Teamtalk\TeamTalkLib.NET\obj\Release\TeamTalkLib.NET.dll
+C:\dev\Teamtalk\TeamTalkLib.NET\obj\Release\TeamTalkLib.NET.pdb

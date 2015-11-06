@@ -1,0 +1,627 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;TT_ZEROCOPY</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3F7EDD07-9AA6-456E-A8C6-60D1775CE739}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TeamTalkApp.NET</RootNamespace>
+    <AssemblyName>TeamTalkApp.NET</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>pl-PL</TargetCulture>
+    <ProductName>wDialogu</ProductName>
+    <PublisherName>wDialogu</PublisherName>
+    <SuiteName>wDialogu</SuiteName>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'UI Test|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\UI Test\</OutputPath>
+    <DefineConstants>UITEST</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'UI Test|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\UI Test\</OutputPath>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <DefineConstants>TRACE;DEBUG;UITEST</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Handler Register|x86'">
+    <OutputPath>bin\x86\Handler Register\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Handler Register|x64'">
+    <OutputPath>bin\x64\Handler Register\</OutputPath>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>9E1B8D976EBC47F2252F3D4434BB3EF88872D35F</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>TeamTalk5App.NET_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NAudio">
+      <HintPath>libraries\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.WindowsMediaFormat">
+      <HintPath>libraries\NAudio.WindowsMediaFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1-beta3\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.0.0-rc\lib\net40\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TeamTalk4Pro.NET">
+      <HintPath>libraries\TeamTalk4Pro.NET.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\AboutWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AboutWindow.Designer.cs">
+      <DependentUpon>AboutWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AccessibilityInformationWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AccessibilityInformationWindow.Designer.cs">
+      <DependentUpon>AccessibilityInformationWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AudioStorageDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AudioStorageDlg.Designer.cs">
+      <DependentUpon>AudioStorageDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ChannelDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChannelDlg.Designer.cs">
+      <DependentUpon>ChannelDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChannelsView.cs" />
+    <Compile Include="Forms\ConnectDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ConnectDlg.Designer.cs">
+      <DependentUpon>ConnectDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DesktopDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DesktopDlg.Designer.cs">
+      <DependentUpon>DesktopDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DesktopShareDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DesktopShareDlg.Designer.cs">
+      <DependentUpon>DesktopShareDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilesView.cs" />
+    <Compile Include="Forms\FileTransferDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FileTransferDlg.Designer.cs">
+      <DependentUpon>FileTransferDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AutoMicroConf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AutoMicroConf.Designer.cs">
+      <DependentUpon>AutoMicroConf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FirstRunWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FirstRunWindow.Designer.cs">
+      <DependentUpon>FirstRunWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MessageUserDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MessageUserDialog.Designer.cs">
+      <DependentUpon>MessageUserDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MicroWarning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MicroWarning.Designer.cs">
+      <DependentUpon>MicroWarning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StartupSetupDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StartupSetupDlg.Designer.cs">
+      <DependentUpon>StartupSetupDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HotKeyDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HotKeyDlg.Designer.cs">
+      <DependentUpon>HotKeyDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InputBox.Designer.cs">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LoginDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginDlg.Designer.cs">
+      <DependentUpon>LoginDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MediaFileDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MediaFileDlg.Designer.cs">
+      <DependentUpon>MediaFileDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MessageDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MessageDlg.Designer.cs">
+      <DependentUpon>MessageDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PreferencesDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PreferencesDlg.Designer.cs">
+      <DependentUpon>PreferencesDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AboutWindow.resx">
+      <DependentUpon>AboutWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AccessibilityInformationWindow.resx">
+      <DependentUpon>AccessibilityInformationWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AudioStorageDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AudioStorageDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AutoMicroConf.resx">
+      <DependentUpon>AutoMicroConf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChannelDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ChannelDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ConnectDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ConnectDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DesktopDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DesktopDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DesktopShareDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DesktopShareDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FileTransferDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FileTransferDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FirstRunWindow.resx">
+      <DependentUpon>FirstRunWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MessageUserDialog.resx">
+      <DependentUpon>MessageUserDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MicroWarning.resx">
+      <DependentUpon>MicroWarning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StartupSetupDlg.resx">
+      <DependentUpon>StartupSetupDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HotKeyDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HotKeyDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InputBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LoginDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MediaFileDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MediaFileDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MessageDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MessageDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PreferencesDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PreferencesDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ServerPropertiesDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ServerPropertiesDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ServerStatsDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ServerStatsDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserAccountsDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserAccountsDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserInfoDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserInfoDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VideoDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VideoDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControls\UserLabel.resx">
+      <DependentUpon>UserLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Forms\ServerPropertiesDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ServerPropertiesDlg.Designer.cs">
+      <DependentUpon>ServerPropertiesDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ServerStatsDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ServerStatsDlg.Designer.cs">
+      <DependentUpon>ServerStatsDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="Forms\UserAccountsDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserAccountsDlg.Designer.cs">
+      <DependentUpon>UserAccountsDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserInfoDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserInfoDlg.Designer.cs">
+      <DependentUpon>UserInfoDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserLabel.Designer.cs">
+      <DependentUpon>UserLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsersView.cs" />
+    <Compile Include="Utils\ChatParser.cs" />
+    <Compile Include="Utils\ArgumentParser.cs" />
+    <Compile Include="Utils\NLogExtensions.cs" />
+    <Compile Include="Utils\RegUtils.cs" />
+    <Compile Include="Utils\StringCompression.cs" />
+    <Compile Include="Utils\Util.cs" />
+    <Compile Include="Forms\VideoDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VideoDlg.Designer.cs">
+      <DependentUpon>VideoDlg.cs</DependentUpon>
+    </Compile>
+    <None Include="TeamTalk5App.NET_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\balloon-ellipsis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\microphone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification-counter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification-counter-02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification-counter-03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification-counter-04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification-counter-05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification-counter-06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification-counter-07.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification-counter-08.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification-counter-09.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification-counter-10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification-counter-11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification-counter-12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification-counter-13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification-counter-14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification-counter-15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification-counter-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification-counter-17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification-counter-18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification-counter-19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification-counter-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\speaker-volume.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\speaker-volume-control-mute.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\status.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\status-away.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\status-busy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\status-offline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-silhouette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TeamTalkLib.NET\TeamTalkLib.NET.csproj">
+      <Project>{20b41f00-d87a-49e7-a97d-ae695609bfc6}</Project>
+      <Name>TeamTalkLib.NET</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-bold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-heading.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-italic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-strike.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-underline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report-share.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-color1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <None Include="Resources\speaking1.png" />
+    <None Include="Resources\windows-7-headphone-icon.png" />
+    <None Include="Resources\record.png" />
+    <None Include="Resources\speaking.png" />
+    <None Include="Resources\rejoin.png" />
+    <None Include="Resources\queue.png" />
+    <None Include="Resources\origin.png" />
+    <None Include="Resources\myself.png" />
+    <None Include="Resources\moderator.png" />
+    <None Include="Resources\blocked.png" />
+    <None Include="Resources\badge.png" />
+    <None Include="Resources\back.png" />
+    <None Include="Resources\wdialogu.png" />
+    <None Include="Resources\EACicon.jpg" />
+    <None Include="Resources\windows-7-audio-icon.png" />
+    <None Include="Resources\windows-7-audio-icon1.png" />
+    <None Include="Resources\keyboard_key_t.png" />
+    <None Include="Resources\thumb_Information.png" />
+    <None Include="Resources\username.png" />
+    <None Include="Resources\announce.png" />
+    <None Include="Resources\announce_48.png" />
+    <None Include="Resources\message_admin.png" />
+    <None Include="Resources\message_admin_small.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(ProjectDir)\libraries\TeamTalk5Pro.dll" "$(TargetDir)\TeamTalk5Pro.dll"
+mkdir "$(TargetDir)\sounds\"
+copy "$(ProjectDir)\Resources\ding.wav" "$(TargetDir)\sounds\ding.wav"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

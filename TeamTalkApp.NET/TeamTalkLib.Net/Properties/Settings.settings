@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TeamTalkLib.NET.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="PrivateKey" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">&lt;RSAKeyValue&gt;&lt;Modulus&gt;kGxMjlagPVZG2okBD1IQ/cKWnAIKt+38F2hOoZDeoizqe2Dxyc15qQsMoablWvmM+kHj94R5OskweWs5JK2GK6YvbISP31fsLgvtvlv5HB4y0IrnYDMtuDKC6q6f7TvCFswC50tJzDSvUXuV/+ffH2GVtfmfStbWCNCTkZXRIBM=&lt;/Modulus&gt;&lt;Exponent&gt;AQAB&lt;/Exponent&gt;&lt;P&gt;15Go+zOzmsEfR72rkTYgu7jaUV2Z5/XYTS17mGwJYdM7zWCO7vBBuEIaR8TYxP4DJCN2vdBKUw2D8TO717uygw==&lt;/P&gt;&lt;Q&gt;q4KiWupn6YzxHHf6BrPQkKWT8ICGb/oOvbMM9JQZQCJRnErmFLMM41zB92fvewnJ7jZbAVxBJDUs9b5Ym+YnMQ==&lt;/Q&gt;&lt;DP&gt;HItXGtw/vhAweiltXG8UaocRsZB5XrO5Do8lPIuhumhkFM/iXVVG/oUSQcqZAYy5EcH4aS35iYHSpM+64dgizQ==&lt;/DP&gt;&lt;DQ&gt;iI4WXnTMD3QcdSJBfBynLsPmqlJqt7VND1UEN6fDAwFQITSxREHbPRuZhDbIwhnlITk99DNT2lRMW80WF+qDwQ==&lt;/DQ&gt;&lt;InverseQ&gt;YaH7RrCxaHOv9KOIYWPrPal+7bVHU6xeCjFk6vt3naEhwfnFqa/CVYw5t/PR538K/h2xJnbsRT3opjw7P500iQ==&lt;/InverseQ&gt;&lt;D&gt;XfF0YupKVVu3vxN7UwHo94gJ+/UAD+CIKJm6/DGGACwDYroOzVwRFTqQvt4XNvQ5FdiidzD+wpR4KaLrisYtDV/El/LkIaOXqGaew81UqF/RLRWhJJ5yOYj0gaypilo8x+jmRPoCfJSCNiBTuNY+o9XSeYTje0SqTXc1inYgFkE=&lt;/D&gt;&lt;/RSAKeyValue&gt;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
